@@ -1,0 +1,14 @@
+extends ../../layout.jade
+block contenido
+  div(class="col-md-8 remove-float center-block big-top-space")
+    h1 Crear nueva imagen
+    form(action="/app/imagenes", method="POST")
+      div(class="form-group")
+        label(for="title") Titulo
+        input(type="text", placeholder="Titulo de la imagen", name="title", id="title", class="form-control")
+      div
+        label(for="archivo") Archivo
+        input(type="file", name="archivo", id="archivo", class="form-control")    
+      div(class="row top-space")
+        div(class="col-xs-12 col-sm-6")
+          input(type="submit", value="Guardar imagen", class="btn btn-info")
